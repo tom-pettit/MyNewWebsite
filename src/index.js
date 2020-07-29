@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.css'
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App style={{height: '100%'}}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

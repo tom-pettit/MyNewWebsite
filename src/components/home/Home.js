@@ -174,11 +174,10 @@ const useStyles = makeStyles((theme) => ({
 
 const Home = () => {
     const classes = useStyles();
-    const props = useSpring({ config: { duration: 5000 }, opacity: 1, from: {opacity: 0} })
 
     return (
         <div id='wwhole' style={{maxHeight: '100vh', margin: 0}}>
-            <Fade delay={2000}>
+            <Fade delay={11500}>
                 <Navbar />
             </Fade>
             <div className={classes.root} style={{marginTop: '15vh'}}>

@@ -224,7 +224,6 @@ const useStyles = makeStyles((theme) => ({
 
 const About = () => {
     const classes = useStyles();
-    const props = useSpring({ config: { duration: 5000 }, opacity: 1, from: {opacity: 0} })
 
     return (
         <div id='wwhole' style={{maxHeight: '100vh', margin: 0}}>
@@ -242,16 +241,13 @@ const About = () => {
                             </Typography>
                             </CardContent>
                             <CardActions disableSpacing>
-                                <IconButton href='https://twitter.com/BrumafriendHist' target='_blank' style={{color: 'white'}}>
+                                <IconButton href='https://twitter.com/TomPettit9' target='_blank' style={{color: 'white'}}>
                                     <TwitterIcon className={classes.icons}/>
                                 </IconButton>
-                                <IconButton href='' style={{color: 'white'}}>
-                                    <LinkedInIcon className={classes.icons}/>
-                                </IconButton>
-                                <IconButton href='' style={{color: 'white'}}>
+                                <IconButton href='https://github.com/tom-pettit' target='_blank' style={{color: 'white'}}>
                                     <GitHubIcon className={classes.icons}/>
                                 </IconButton>
-                                <IconButton href='' style={{color: 'white'}}>
+                                <IconButton href='https://www.facebook.com/tom.pettit.92798/'  target='_blank' style={{color: 'white'}}>
                                     <FacebookIcon className={classes.icons}/>
                                 </IconButton>
                             </CardActions>
@@ -306,7 +302,7 @@ const About = () => {
                             <div className={classes.progress} style={{display: 'inline-block'}}>
                                 <AnimatedProgressProvider
                                     valueStart={0}
-                                    valueEnd={65}
+                                    valueEnd={70}
                                     duration={4}
                                     easingFunction={easeQuadInOut}
                                     
@@ -335,7 +331,7 @@ const About = () => {
                             <div className={classes.progress} style={{display: 'inline-block'}}>
                                 <AnimatedProgressProvider
                                     valueStart={0}
-                                    valueEnd={75}
+                                    valueEnd={70}
                                     duration={4}
                                     easingFunction={easeQuadInOut}
                                     

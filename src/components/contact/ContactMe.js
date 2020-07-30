@@ -64,19 +64,31 @@ const ContactMe = () => {
     return (
         <div style={{overflow: 'hidden'}}>
             <Navbar />
-            <div style={{textAlign: 'center', marginTop: 50}}>
+            <div style={{textAlign: 'center', marginTop: '10%'}}>
                 <div style={{display: 'inline-block'}}>
-                    <IconButton href='' style={{color: 'white'}}>
+                <Fade delay={750} duration={1500}>
+                    <div style={{display: 'inline-block'}}>
+                    <IconButton href='https://twitter.com/TomPettit9' target='_blank' style={{color: 'white', marginLeft: 20, marginRight: 20}}>
                         <TwitterIcon fontSize='large' className={classes.icons}/>
                     </IconButton>
+                    </div>
+                </Fade>
 
-                    <IconButton href='' style={{color: 'white'}}>
+                <Fade delay={1250} duration={1500}>
+                    <div style={{display: 'inline-block'}}>
+                    <IconButton href='mailto:tomwpettit9@gmail.com' style={{color: 'white', marginLeft: 20, marginRight: 20}}>
                         <MailIcon fontSize='large' className={classes.icons}/>
                     </IconButton>
-                    
-                    <IconButton href='' style={{color: 'white'}}>
+                    </div>
+                </Fade>
+
+                <Fade delay={1750} duration={1500}>
+                    <div style={{display: 'inline-block'}}>
+                    <IconButton href='https://www.facebook.com/tom.pettit.92798/' target='_blank' style={{color: 'white', marginLeft: 20, marginRight: 20}}>
                         <FacebookIcon fontSize='large' className={classes.icons}/>
                     </IconButton>
+                    </div>
+                </Fade>
                 </div>
             </div>
         </div>

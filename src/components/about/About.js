@@ -189,6 +189,9 @@ const useStyles = makeStyles((theme) => ({
         ['@media (max-width: 660px)']: {
             width: '60px',
         },
+        ['@media (max-width: 370px)']: {
+            width: '40px',
+        },
 
     },
     skillcontainer: {

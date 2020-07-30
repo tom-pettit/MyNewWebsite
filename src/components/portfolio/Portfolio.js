@@ -43,13 +43,54 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1
       },
       media: {
-        height: 190,
+        ['@media (min-width: 860px)']: {
+            height: 190,
+        },
+        ['@media (max-width: 860px)']: {
+            height: 140,
+        },
       },
       cardtitle: {
           fontSize: 15
       },
       cardactionarea: {
-          height: 275
+        ['@media (min-width: 860px)']: {
+            height: 275,
+        },
+        ['@media (max-width: 860px)']: {
+            height: 200,
+        },
+      },
+      largescreengrid: {
+        ['@media (min-width: 860px)']: {
+            display: 'visible'
+        },
+        ['@media (max-width: 860px)']: {
+            display: 'none'
+        },
+      },
+      mediumscreengrid: {
+        ['@media (min-width: 660px)']: {
+            display: 'visible'
+        },
+        ['@media (max-width: 660px)']: {
+            display: 'none'
+        },
+        ['@media (min-width: 860px)']: {
+            display: 'none'
+        },
+      },
+      smallscreengrid: {
+        ['@media (max-width: 660px)']: {
+            display: 'visible'
+        },
+        ['@media (min-width: 660px)']: {
+            display: 'none'
+        },
+      },
+      carddescription: {
+          height: '25px',
+          overflow: 'hidden'
       }
   }));
 
@@ -60,138 +101,140 @@ const Portfolio = () => {
         <>
         <Navbar />
         <div className={classes.root} style={{height: '100%', margin: 0}}>
-            <Grid container spacing={3}>
 
-                <Grid item xs={3}>
-                <Fade delay={500} duration={1500}>
-                    <Card className={classes.root} style={{margin: 10}}>
-                        <CardActionArea href='ukcoronatracker.web.app' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
-                            <CardMedia
-                                className={classes.media}
-                                image={UKCoronaTrackerImg}
-                                title="Contemplative Reptile"
-                            />
+            <div className={classes.largescreengrid}>
+                <Grid container spacing={3}>
 
-                            <CardContent>
-                                <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
-                                    ukcoronatracker.web.app
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}}>
-                                    A website used to track the COVID-19 situation in the UK
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
+                    <Grid item xs={3}>
+                    <Fade delay={500} duration={1500}>
+                        <Card className={classes.root} style={{margin: 10}}>
+                            <CardActionArea href='https://ukcoronatracker.web.app' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={UKCoronaTrackerImg}
+                                    title="Contemplative Reptile"
+                                />
 
-                        <CardActions style={{textAlign: 'center'}}>
-                            <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
-                                <img src={ReactImg} height='30' width='30'/>
-                            </IconButton>
-                        </CardActions>
-                    </Card>
-                </Fade>
+                                <CardContent>
+                                    <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
+                                        ukcoronatracker.web.app
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}}>
+                                        A website used to track the COVID-19 situation in the UK
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+
+                            <CardActions style={{textAlign: 'center'}}>
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={ReactImg} height='30' width='30'/>
+                                </IconButton>
+                            </CardActions>
+                        </Card>
+                    </Fade>
+                    </Grid>
+
+                    <Grid item xs={3}>
+                    <Fade delay={750} duration={1500}>
+                        <Card className={classes.root} style={{margin: 10}}>
+                            <CardActionArea href='https://brumafriendhistory.com' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={BrumafriendHistoryImg}
+                                    title="Contemplative Reptile"
+                                />
+
+                                <CardContent>
+                                    <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
+                                        brumafriendhistory.com
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}}>
+                                        A blog website built for Brumafriend to showcase his History Articles
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+
+                            <CardActions style={{textAlign: 'center'}}>
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={ReactImg} height='30' width='30'/>
+                                </IconButton>
+
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={FirebaseImg} height='30' width='30'/>
+                                </IconButton>
+                            </CardActions>
+                        </Card>
+                    </Fade>
+                    </Grid>
+
+                    <Grid item xs={3}>
+                    <Fade delay={1000} duration={1500}>
+                        <Card className={classes.root} style={{margin: 10}}>
+                            <CardActionArea href='https://hannahimaart-246f0.web.app/' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={HannahImaArtImg}
+                                    title="Contemplative Reptile"
+                                />
+
+                                <CardContent>
+                                    <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h5" style={{fontFamily: 'Nunito Sans'}}>
+                                        hannahimaart-246f0.web.app/
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}}>
+                                        An art portfolio and shop built for Hannah Ima.
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+
+                            <CardActions style={{textAlign: 'center'}}>
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={ReactImg} height='30' width='30'/>
+                                </IconButton>
+
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={FirebaseImg} height='30' width='30'/>
+                                </IconButton>
+                            </CardActions>
+                        </Card>
+                    </Fade>
+                    </Grid>
+
+                    <Grid item xs={3}>
+                    <Fade delay={1250} duration={1500}>
+                        <Card className={classes.root} style={{margin: 10}}>
+                            <CardActionArea href='https://concurrentplayers.com' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={ConcurrentPlayersImg}
+                                    title="Contemplative Reptile"
+                                />
+
+                                <CardContent>
+                                    <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
+                                        concurrentplayers.com
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}}>
+                                        A website used to track the number of concurrent players of any steam game
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+
+                            <CardActions style={{textAlign: 'center'}}>
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={ReactImg} height='30' width='30'/>
+                                </IconButton>
+
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={FirebaseImg} height='30' width='30'/>
+                                </IconButton>
+                            </CardActions>
+                        </Card>
+                    </Fade>
+                    </Grid>
                 </Grid>
-
-                <Grid item xs={3}>
-                <Fade delay={750} duration={1500}>
-                    <Card className={classes.root} style={{margin: 10}}>
-                        <CardActionArea href='https://brumafriendhistory.com' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
-                            <CardMedia
-                                className={classes.media}
-                                image={BrumafriendHistoryImg}
-                                title="Contemplative Reptile"
-                            />
-
-                            <CardContent>
-                                <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
-                                    brumafriendhistory.com
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}}>
-                                    A blog website built for Brumafriend to showcase his History Articles
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-
-                        <CardActions style={{textAlign: 'center'}}>
-                            <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
-                                <img src={ReactImg} height='30' width='30'/>
-                            </IconButton>
-
-                            <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
-                                <img src={FirebaseImg} height='30' width='30'/>
-                            </IconButton>
-                        </CardActions>
-                    </Card>
-                </Fade>
-                </Grid>
-
-                <Grid item xs={3}>
-                <Fade delay={1000} duration={1500}>
-                    <Card className={classes.root} style={{margin: 10}}>
-                        <CardActionArea href='https://hannahimaart-246f0.web.app/' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
-                            <CardMedia
-                                className={classes.media}
-                                image={HannahImaArtImg}
-                                title="Contemplative Reptile"
-                            />
-
-                            <CardContent>
-                                <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h5" style={{fontFamily: 'Nunito Sans'}}>
-                                    hannahimaart-246f0.web.app/
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}}>
-                                    An art portfolio and shop built for Hannah Ima.
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-
-                        <CardActions style={{textAlign: 'center'}}>
-                            <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
-                                <img src={ReactImg} height='30' width='30'/>
-                            </IconButton>
-
-                            <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
-                                <img src={FirebaseImg} height='30' width='30'/>
-                            </IconButton>
-                        </CardActions>
-                    </Card>
-                </Fade>
-                </Grid>
-
-                <Grid item xs={3}>
-                <Fade delay={1250} duration={1500}>
-                    <Card className={classes.root} style={{margin: 10}}>
-                        <CardActionArea href='https://concurrentplayers.com' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
-                            <CardMedia
-                                className={classes.media}
-                                image={ConcurrentPlayersImg}
-                                title="Contemplative Reptile"
-                            />
-
-                            <CardContent>
-                                <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
-                                    concurrentplayers.com
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}}>
-                                    A website used to track the number of concurrent players of any steam game
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-
-                        <CardActions style={{textAlign: 'center'}}>
-                            <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
-                                <img src={ReactImg} height='30' width='30'/>
-                            </IconButton>
-
-                            <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
-                                <img src={FirebaseImg} height='30' width='30'/>
-                            </IconButton>
-                        </CardActions>
-                    </Card>
-                </Fade>
-                </Grid>
-            </Grid>
-            
-            <Grid container spacing={3}>
+                
+                <Grid container spacing={3}>
                 <Grid item xs={3}>
                 <Fade delay={1500} duration={1500}>
                     <Card className={classes.root} style={{margin: 10}}>
@@ -221,6 +264,337 @@ const Portfolio = () => {
                 </Fade>
                 </Grid>
             </Grid>
+            </div>
+
+            <div className={classes.mediumscreengrid}>
+                <Grid container spacing={3}>
+
+                    <Grid item xs={6}>
+                    <Fade delay={500} duration={1500}>
+                        <Card className={classes.root} style={{margin: 10}}>
+                            <CardActionArea href='https://ukcoronatracker.web.app' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={UKCoronaTrackerImg}
+                                    title="Contemplative Reptile"
+                                />
+
+                                <CardContent>
+                                    <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
+                                        ukcoronatracker.web.app
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}} className={classes.carddescription}>
+                                        A website used to track the COVID-19 situation in the UK
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+
+                            <CardActions style={{textAlign: 'center'}}>
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={ReactImg} height='30' width='30'/>
+                                </IconButton>
+                            </CardActions>
+                        </Card>
+                    </Fade>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                    <Fade delay={750} duration={1500}>
+                        <Card className={classes.root} style={{margin: 10}}>
+                            <CardActionArea href='https://brumafriendhistory.com' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={BrumafriendHistoryImg}
+                                    title="Contemplative Reptile"
+                                />
+
+                                <CardContent>
+                                    <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
+                                        brumafriendhistory.com
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}} className={classes.carddescription}>
+                                        A blog website built for Brumafriend to showcase his History Articles
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+
+                            <CardActions style={{textAlign: 'center'}}>
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={ReactImg} height='30' width='30'/>
+                                </IconButton>
+
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={FirebaseImg} height='30' width='30'/>
+                                </IconButton>
+                            </CardActions>
+                        </Card>
+                    </Fade>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                    <Fade delay={1000} duration={1500}>
+                        <Card className={classes.root} style={{margin: 10}}>
+                            <CardActionArea href='https://hannahimaart-246f0.web.app/' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={HannahImaArtImg}
+                                    title="Contemplative Reptile"
+                                />
+
+                                <CardContent>
+                                    <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h5" style={{fontFamily: 'Nunito Sans'}}>
+                                        hannahimaart-246f0.web.app/
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}} className={classes.carddescription}>
+                                        An art portfolio and shop built for Hannah Ima.
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+
+                            <CardActions style={{textAlign: 'center'}}>
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={ReactImg} height='30' width='30'/>
+                                </IconButton>
+
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={FirebaseImg} height='30' width='30'/>
+                                </IconButton>
+                            </CardActions>
+                        </Card>
+                    </Fade>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                    <Fade delay={1250} duration={1500}>
+                        <Card className={classes.root} style={{margin: 10}}>
+                            <CardActionArea href='https://concurrentplayers.com' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={ConcurrentPlayersImg}
+                                    title="Contemplative Reptile"
+                                />
+
+                                <CardContent>
+                                    <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
+                                        concurrentplayers.com
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}} className={classes.carddescription}>
+                                        A website used to track the number of concurrent players of any steam game
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+
+                            <CardActions style={{textAlign: 'center'}}>
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={ReactImg} height='30' width='30'/>
+                                </IconButton>
+
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={FirebaseImg} height='30' width='30'/>
+                                </IconButton>
+                            </CardActions>
+                        </Card>
+                    </Fade>
+                    </Grid>
+                </Grid>
+                
+                <Grid container spacing={3}>
+                <Grid item xs={6}>
+                <Fade delay={1500} duration={1500}>
+                    <Card className={classes.root} style={{margin: 10}}>
+                        <CardActionArea href='https://github.com/tom-pettit/GeneralRedditBot' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                            <CardMedia
+                                className={classes.media}
+                                image={RedditBotImg}
+                                title="Contemplative Reptile"
+                            />
+
+                            <CardContent>
+                                <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
+                                    General Reddit Bot
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}} className={classes.carddescription}>
+                                    An easy way to create reddit bots. Comes equipped with some prewritten functionality.
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+
+                        <CardActions style={{textAlign: 'center'}}>
+                            <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                <img src={PythonImg} height='30' width='30'/>
+                            </IconButton>
+                        </CardActions>
+                    </Card>
+                </Fade>
+                </Grid>
+            </Grid>
+            </div>
+
+            <div className={classes.smallscreengrid}>
+                <Grid container spacing={3}>
+
+                    <Grid item xs={12}>
+                    <Fade delay={500} duration={1500}>
+                        <Card className={classes.root} style={{margin: 10}}>
+                            <CardActionArea href='https://ukcoronatracker.web.app' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={UKCoronaTrackerImg}
+                                    title="Contemplative Reptile"
+                                />
+
+                                <CardContent>
+                                    <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
+                                        ukcoronatracker.web.app
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}} className={classes.carddescription}>
+                                        A website used to track the COVID-19 situation in the UK
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+
+                            <CardActions style={{textAlign: 'center'}}>
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={ReactImg} height='30' width='30'/>
+                                </IconButton>
+                            </CardActions>
+                        </Card>
+                    </Fade>
+                    </Grid>
+
+                    <Grid item xs={12}>
+                    <Fade delay={750} duration={1500}>
+                        <Card className={classes.root} style={{margin: 10}}>
+                            <CardActionArea href='https://brumafriendhistory.com' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={BrumafriendHistoryImg}
+                                    title="Contemplative Reptile"
+                                />
+
+                                <CardContent>
+                                    <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
+                                        brumafriendhistory.com
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}} className={classes.carddescription}>
+                                        A blog website built for Brumafriend to showcase his History Articles
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+
+                            <CardActions style={{textAlign: 'center'}}>
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={ReactImg} height='30' width='30'/>
+                                </IconButton>
+
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={FirebaseImg} height='30' width='30'/>
+                                </IconButton>
+                            </CardActions>
+                        </Card>
+                    </Fade>
+                    </Grid>
+
+                    <Grid item xs={12}>
+                    <Fade delay={1000} duration={1500}>
+                        <Card className={classes.root} style={{margin: 10}}>
+                            <CardActionArea href='https://hannahimaart-246f0.web.app/' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={HannahImaArtImg}
+                                    title="Contemplative Reptile"
+                                />
+
+                                <CardContent>
+                                    <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h5" style={{fontFamily: 'Nunito Sans'}}>
+                                        hannahimaart-246f0.web.app/
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}} className={classes.carddescription}>
+                                        An art portfolio and shop built for Hannah Ima.
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+
+                            <CardActions style={{textAlign: 'center'}}>
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={ReactImg} height='30' width='30'/>
+                                </IconButton>
+
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={FirebaseImg} height='30' width='30'/>
+                                </IconButton>
+                            </CardActions>
+                        </Card>
+                    </Fade>
+                    </Grid>
+
+                    <Grid item xs={12}>
+                    <Fade delay={1250} duration={1500}>
+                        <Card className={classes.root} style={{margin: 10}}>
+                            <CardActionArea href='https://concurrentplayers.com' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={ConcurrentPlayersImg}
+                                    title="Contemplative Reptile"
+                                />
+
+                                <CardContent>
+                                    <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
+                                        concurrentplayers.com
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}} className={classes.carddescription}>
+                                        A website used to track the number of concurrent players of any steam game
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+
+                            <CardActions style={{textAlign: 'center'}}>
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={ReactImg} height='30' width='30'/>
+                                </IconButton>
+
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={FirebaseImg} height='30' width='30'/>
+                                </IconButton>
+                            </CardActions>
+                        </Card>
+                    </Fade>
+                    </Grid>
+                </Grid>
+                
+                <Grid container spacing={3}>
+                <Grid item xs={12}>
+                <Fade delay={1500} duration={1500}>
+                    <Card className={classes.root} style={{margin: 10}}>
+                        <CardActionArea href='https://github.com/tom-pettit/GeneralRedditBot' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                            <CardMedia
+                                className={classes.media}
+                                image={RedditBotImg}
+                                title="Contemplative Reptile"
+                            />
+
+                            <CardContent>
+                                <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
+                                    General Reddit Bot
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}} className={classes.carddescription}>
+                                    An easy way to create reddit bots. Comes equipped with some prewritten functionality.
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+
+                        <CardActions style={{textAlign: 'center'}}>
+                            <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                <img src={PythonImg} height='30' width='30'/>
+                            </IconButton>
+                        </CardActions>
+                    </Card>
+                </Fade>
+                </Grid>
+            </Grid>
+            </div>
+
+
         </div>
         </>
     )

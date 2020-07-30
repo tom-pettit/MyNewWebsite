@@ -5,6 +5,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -22,6 +25,15 @@ const useStyles = makeStyles((theme) => ({
     ['@media (max-width: 660px)']: {
         display: 'none',
     }
+    },
+
+    menubutton: {
+      ['@media (max-width: 660px)']: {
+        display: 'visible',
+    },
+    ['@media (min-width: 660px)']: {
+      display: 'none',
+  },
     },
 
     content: {
@@ -102,7 +114,12 @@ const Navbar = () => {
                         <div className={classes.extrabuttons}>
                             <Button href='/about' style={{fontFamily: 'Nunito Sans', marginRight: 15, color: 'white'}} >About</Button>
                             <Button href='/portfolio' style={{fontFamily: 'Nunito Sans', marginRight: 15, color: 'white'}} >Porfolio</Button>
-                            <Button style={{fontFamily: 'Nunito Sans', marginRight: 15, color: 'white'}} >Contact Me</Button>
+                            <Button href='/contact' style={{fontFamily: 'Nunito Sans', marginRight: 15, color: 'white'}} >Contact Me</Button>
+                        </div>
+                        <div className={classes.menubutton}>
+                          <IconButton href='/menu' style={{color: 'white'}}>
+                              <MenuIcon className={classes.icons} style={{fontSize: 'large'}}/>
+                          </IconButton>
                         </div>
                     </Toolbar>
             </AppBar>

@@ -18,6 +18,7 @@ import { easeQuadInOut } from "d3-ease";
 import {useSpring, animated, config} from 'react-spring'
 import Navbar from '../navbars/Navbar';
 import Fade from 'react-reveal/Fade';
+import MenuIcon from '@material-ui/icons/Menu';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -26,6 +27,19 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: 'none',
       marginRight: 0,
       flexGrow: 1,
+    },
+
+    intro: {
+        ['@media (min-width: 860px)']: {
+            fontSize: 40,
+        },
+        ['@media (max-width: 860px)']: {
+            fontSize: 30,
+        },
+        ['@media (max-width: 660px)']: {
+            fontSize: 20,
+    
+        },
     },
   
     title: {
@@ -164,13 +178,13 @@ const Home = () => {
 
     return (
         <div id='wwhole' style={{maxHeight: '100vh', margin: 0}}>
-            <Fade delay={11500}>
+            <Fade delay={2000}>
                 <Navbar />
             </Fade>
             <div className={classes.root} style={{marginTop: '15vh'}}>
                 <div style={{height: '100%', margin: 0, backgroundColor: 'black'}}>
                     <div className={classes.box}>
-                        <h1 style={{color: 'white'}}>
+                        <h1 className={classes.intro} style={{color: 'white', marginLeft: 20}}>
                             <Typewriter
                                 onInit={(typewriter) => {
                                     typewriter.typeString("Hi, I'm Tom. <br></br> I'm a Computer Science Student at Durham University.")

@@ -186,7 +186,7 @@ const Home = () => {
                         <h1 className={classes.intro} style={{color: 'white', marginLeft: 20}}>
                             <Typewriter
                                 onInit={(typewriter) => {
-                                    typewriter.typeString("Hi, I'm Tom. <br></br> I'm a Computer Science Student at Durham University.")
+                                    typewriter.typeString("Hi, I'm Tom. <br></br> I'm a Computer Science student at Durham University.")
                                     .start();
                                 }}
                             />

@@ -68,15 +68,15 @@ const ContactMe = () => {
                 <div style={{display: 'inline-block'}}>
                 <Fade delay={750} duration={1500}>
                     <div style={{display: 'inline-block'}}>
-                    <IconButton href='https://twitter.com/TomPettit9' target='_blank' style={{color: 'white', marginLeft: 20, marginRight: 20}}>
-                        <TwitterIcon fontSize='large' className={classes.icons}/>
+                    <IconButton href='https://www.linkedin.com/in/tomwpettit/' target='_blank' style={{color: 'white', marginLeft: 20, marginRight: 20}}>
+                        <LinkedInIcon fontSize='large' className={classes.icons}/>
                     </IconButton>
                     </div>
                 </Fade>
 
                 <Fade delay={1250} duration={1500}>
                     <div style={{display: 'inline-block'}}>
-                    <IconButton href='mailto:tomwpettit9@gmail.com' style={{color: 'white', marginLeft: 20, marginRight: 20}}>
+                    <IconButton href='mailto:tompettit6@gmail.com' style={{color: 'white', marginLeft: 20, marginRight: 20}}>
                         <MailIcon fontSize='large' className={classes.icons}/>
                     </IconButton>
                     </div>

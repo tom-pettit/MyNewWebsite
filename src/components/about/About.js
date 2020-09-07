@@ -29,6 +29,11 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import ReactImg from '../images/react.png'
+import PythonImg from '../images/python.png'
+import JSImg from '../images/javascript.png'
+import JavaImg from '../images/java.png'
+import VueImg from '../images/vue.png'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -218,7 +223,18 @@ const useStyles = makeStyles((theme) => ({
         ['@media (max-width: 660px)']: {
           fontSize: 15,
           marginBottom: 0,
-      },
+        },
+    },
+    image: {
+        ['@media (min-width: 860px)']: {
+            width: '100px',
+            height: '100px'
+          },
+          ['@media (max-width: 660px)']: {
+            width: '25px',
+            height: '25px'
+          },
+
     }
   }));
 
@@ -241,8 +257,8 @@ const About = () => {
                             </Typography>
                             </CardContent>
                             <CardActions disableSpacing>
-                                <IconButton href='https://twitter.com/TomPettit9' target='_blank' style={{color: 'white'}}>
-                                    <TwitterIcon className={classes.icons}/>
+                                <IconButton href='https://www.linkedin.com/in/tomwpettit/' target='_blank' style={{color: 'white'}}>
+                                    <LinkedInIcon className={classes.icons}/>
                                 </IconButton>
                                 <IconButton href='https://github.com/tom-pettit' target='_blank' style={{color: 'white'}}>
                                     <GitHubIcon className={classes.icons}/>
@@ -258,40 +274,25 @@ const About = () => {
                         />
                     </Card>
                 </div>
-                <div style={{height: '100%', margin: 0, backgroundColor: 'black', textAlign: 'center'}}>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
+                <div style={{height: '100%', margin: 0, backgroundColor: 'black', textAlign: 'center', marginTop: '5%'}}>
 
+                    <Fade delay={250} duration={1000}>
+                        <div>
+                            <Typography component="h5" variant="h5" className={classes.language} style={{fontFamily: 'Nunito Sans', color: 'white', textAlign: 'center'}}>
+                                Technologies I'm proficient in...
+                            </Typography>
+                        </div>
+                    </Fade>
 
-                    <div style={{width: '100%', display: 'inline-block', margin: '0 auto', marginTop: '10%'}}>
+                    <div style={{width: '100%', display: 'inline-block', margin: '0 auto', marginTop: '2%'}}>
                         <Fade delay={500} duration={1500}>
                         <div style={{textAlign: 'center', display: 'inline-block', marginRight: 20}}>
-                                <Typography component="h5" variant="h5" className={classes.language} style={{fontFamily: 'Nunito Sans', color: 'white', textAlign: 'center'}}>
-                                    Python 
-                                </Typography>
-                                <div className={classes.progress} style={{display: 'inline-block'}}>
-                                    <AnimatedProgressProvider
-                                        valueStart={0}
-                                        valueEnd={80}
-                                        duration={4}
-                                        easingFunction={easeQuadInOut}
-                                        
-                                    >
-                                        {value => {
-                                        const roundedValue = Math.round(value);
-                                        return (
-                                            <CircularProgressbar
-                                            value={value}
-                                            text={`${roundedValue}%`}
-                                            styles={buildStyles({ pathTransition: "none" })}
-                                            />
-                                        );
-                                        }}
-                                    </AnimatedProgressProvider>
-                                </div>
-                            </div>
+                            <Typography component="h5" variant="h5" className={classes.language} style={{fontFamily: 'Nunito Sans', color: 'white', textAlign: 'center'}}>
+                                Python 
+                            </Typography>
+                            <img className={classes.image} src={PythonImg} height='100' width='100' ></img>
+
+                        </div>
                         </Fade>
 
                         <Fade delay={750} duration={1500}>
@@ -299,27 +300,8 @@ const About = () => {
                             <Typography component="h5" variant="h5" className={classes.language} style={{fontFamily: 'Nunito Sans', color: 'white', textAlign: 'center'}}>
                                 JavaScript 
                             </Typography>
-                            <div className={classes.progress} style={{display: 'inline-block'}}>
-                                <AnimatedProgressProvider
-                                    valueStart={0}
-                                    valueEnd={70}
-                                    duration={4}
-                                    easingFunction={easeQuadInOut}
-                                    
-                                >
-                                    {value => {
-                                    const roundedValue = Math.round(value);
-                                    return (
-                                        <CircularProgressbar
-                                        value={value}
-                                        text={`${roundedValue}%`}
-                                        style={{display: 'inline-block'}}
-                                        styles={buildStyles({ pathTransition: "none" })}
-                                        />
-                                    );
-                                    }}
-                                </AnimatedProgressProvider>
-                            </div>
+                            <img className={classes.image} src={JSImg} height='100' width='100' ></img>
+
                         </div>
                         </Fade>
 
@@ -328,27 +310,7 @@ const About = () => {
                             <Typography component="h5" variant="h5" className={classes.language} style={{fontFamily: 'Nunito Sans', color: 'white', textAlign: 'center'}}>
                                 React 
                             </Typography>
-                            <div className={classes.progress} style={{display: 'inline-block'}}>
-                                <AnimatedProgressProvider
-                                    valueStart={0}
-                                    valueEnd={70}
-                                    duration={4}
-                                    easingFunction={easeQuadInOut}
-                                    
-                                >
-                                    {value => {
-                                    const roundedValue = Math.round(value);
-                                    return (
-                                        <CircularProgressbar
-                                        value={value}
-                                        text={`${roundedValue}%`}
-                                        style={{display: 'inline-block'}}
-                                        styles={buildStyles({ pathTransition: "none" })}
-                                        />
-                                    );
-                                    }}
-                                </AnimatedProgressProvider>
-                            </div>
+                            <img className={classes.image} src={ReactImg} height='100' width='100' ></img>
                         </div>
                         </Fade>
 
@@ -357,27 +319,19 @@ const About = () => {
                             <Typography component="h5" variant="h5" className={classes.language} style={{fontFamily: 'Nunito Sans', color: 'white', textAlign: 'center'}}>
                                 Java 
                             </Typography>
-                            <div className={classes.progress} style={{display: 'inline-block'}}>
-                                <AnimatedProgressProvider
-                                    valueStart={0}
-                                    valueEnd={15}
-                                    duration={4}
-                                    easingFunction={easeQuadInOut}
-                                    
-                                >
-                                    {value => {
-                                    const roundedValue = Math.round(value);
-                                    return (
-                                        <CircularProgressbar
-                                        value={value}
-                                        text={`${roundedValue}%`}
-                                        styles={buildStyles({ pathTransition: "none" })}
-                                        />
-                                    );
-                                    }}
-                                </AnimatedProgressProvider>
-                            </div>
-                         </div>
+                            <img className={classes.image} src={JavaImg} height='100' width='100' ></img>
+
+                        </div>
+                        </Fade>
+
+                        <Fade delay={1500} duration={1500}>
+                        <div style={{textAlign: 'center', display: 'inline-block', marginLeft: 20}}>
+                            <Typography component="h5" variant="h5" className={classes.language} style={{fontFamily: 'Nunito Sans', color: 'white', textAlign: 'center'}}>
+                                Vue 
+                            </Typography>
+                            <img className={classes.image} src={VueImg} height='100' width='100' ></img>
+
+                        </div>
                         </Fade>
                     </div>
                 </div>

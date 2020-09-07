@@ -27,6 +27,7 @@ import MeImg from '../images/MeImg.jpg'
 import UKCoronaTrackerImg from '../images/ukcoronatracker.png'
 import BrumafriendHistoryImg from '../images/brumafriendhistory.png'
 import HannahImaArtImg from '../images/hannahimaart.png'
+import BobaShopImg from '../images/bobashop.png'
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -37,6 +38,8 @@ import FirebaseImg from '../images/firebase.png'
 import ConcurrentPlayersImg from '../images/concurrentplayers.png'
 import RedditBotImg from '../images/redditbot.png'
 import PythonImg from '../images/python.png'
+import VueImg from '../images/vue.png'
+import NodeJSImg from '../images/nodejs.png'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -104,34 +107,39 @@ const Portfolio = () => {
 
             <div className={classes.largescreengrid}>
                 <Grid container spacing={3}>
-
                     <Grid item xs={3}>
                     <Fade delay={500} duration={1500}>
-                        <Card className={classes.root} style={{margin: 10}}>
-                            <CardActionArea href='https://ukcoronatracker.web.app' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
-                                <CardMedia
-                                    className={classes.media}
-                                    image={UKCoronaTrackerImg}
-                                    title="Contemplative Reptile"
-                                />
+                            <Card className={classes.root} style={{margin: 10}}>
+                                <CardActionArea href='https://bobashop-1aa37.web.app/' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                                    <CardMedia
+                                        className={classes.media}
+                                        image={BobaShopImg}
+                                        title="Contemplative Reptile"
+                                    />
 
-                                <CardContent>
-                                    <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
-                                        ukcoronatracker.web.app
-                                    </Typography>
-                                    <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}}>
-                                        A website used to track the COVID-19 situation in the UK
-                                    </Typography>
-                                </CardContent>
-                            </CardActionArea>
+                                    <CardContent>
+                                        <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
+                                            Boba Tea Store
+                                        </Typography>
+                                        <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}} className={classes.carddescription}>
+                                            A website with a built in online ordering system, developed for a company in the US.
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
 
-                            <CardActions style={{textAlign: 'center'}}>
-                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
-                                    <img src={ReactImg} height='30' width='30'/>
-                                </IconButton>
-                            </CardActions>
-                        </Card>
-                    </Fade>
+                                <CardActions style={{textAlign: 'center'}}>
+                                    <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                        <img src={VueImg} height='30' width='30'/>
+                                    </IconButton>
+                                    <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                        <img src={NodeJSImg} height='30' width='40'/>
+                                    </IconButton>
+                                    <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                        <img src={FirebaseImg} height='30' width='30'/>
+                                    </IconButton>
+                                </CardActions>
+                            </Card>
+                        </Fade>
                     </Grid>
 
                     <Grid item xs={3}>
@@ -235,8 +243,8 @@ const Portfolio = () => {
                 </Grid>
                 
                 <Grid container spacing={3}>
-                <Grid item xs={3}>
-                <Fade delay={1500} duration={1500}>
+                    <Grid item xs={3}>
+                    <Fade delay={1500} duration={1500}>
                     <Card className={classes.root} style={{margin: 10}}>
                         <CardActionArea href='https://github.com/tom-pettit/GeneralRedditBot' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
                             <CardMedia
@@ -261,16 +269,80 @@ const Portfolio = () => {
                             </IconButton>
                         </CardActions>
                     </Card>
-                </Fade>
+                    </Fade>
+                    </Grid>
+
+                    <Grid item xs={3}>
+                    <Fade delay={1750} duration={1500}>
+                        <Card className={classes.root} style={{margin: 10}}>
+                            <CardActionArea href='https://ukcoronatracker.web.app' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={UKCoronaTrackerImg}
+                                    title="Contemplative Reptile"
+                                />
+
+                                <CardContent>
+                                    <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
+                                        ukcoronatracker.web.app
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}}>
+                                        A website used to track the COVID-19 situation in the UK
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+
+                            <CardActions style={{textAlign: 'center'}}>
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={ReactImg} height='30' width='30'/>
+                                </IconButton>
+                            </CardActions>
+                        </Card>
+                    </Fade>
+                    </Grid>
                 </Grid>
-            </Grid>
+
             </div>
 
             <div className={classes.mediumscreengrid}>
                 <Grid container spacing={3}>
-
                     <Grid item xs={6}>
                     <Fade delay={500} duration={1500}>
+                            <Card className={classes.root} style={{margin: 10}}>
+                                <CardActionArea href='https://bobashop-1aa37.web.app/' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                                    <CardMedia
+                                        className={classes.media}
+                                        image={BobaShopImg}
+                                        title="Contemplative Reptile"
+                                    />
+
+                                    <CardContent>
+                                        <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
+                                            Boba Tea Store
+                                        </Typography>
+                                        <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}} className={classes.carddescription}>
+                                            A website with a built in online ordering system, developed for a company in the US.
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+
+                                <CardActions style={{textAlign: 'center'}}>
+                                    <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                        <img src={VueImg} height='30' width='30'/>
+                                    </IconButton>
+                                    <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                        <img src={NodeJSImg} height='30' width='40'/>
+                                    </IconButton>
+                                    <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                        <img src={FirebaseImg} height='30' width='30'/>
+                                    </IconButton>
+                                </CardActions>
+                            </Card>
+                        </Fade>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                    <Fade delay={750} duration={1500}>
                         <Card className={classes.root} style={{margin: 10}}>
                             <CardActionArea href='https://ukcoronatracker.web.app' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
                                 <CardMedia
@@ -299,7 +371,7 @@ const Portfolio = () => {
                     </Grid>
 
                     <Grid item xs={6}>
-                    <Fade delay={750} duration={1500}>
+                    <Fade delay={1000} duration={1500}>
                         <Card className={classes.root} style={{margin: 10}}>
                             <CardActionArea href='https://brumafriendhistory.com' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
                                 <CardMedia
@@ -332,7 +404,7 @@ const Portfolio = () => {
                     </Grid>
 
                     <Grid item xs={6}>
-                    <Fade delay={1000} duration={1500}>
+                    <Fade delay={1250} duration={1500}>
                         <Card className={classes.root} style={{margin: 10}}>
                             <CardActionArea href='https://hannahimaart-246f0.web.app/' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
                                 <CardMedia
@@ -365,7 +437,7 @@ const Portfolio = () => {
                     </Grid>
 
                     <Grid item xs={6}>
-                    <Fade delay={1250} duration={1500}>
+                    <Fade delay={1500} duration={1500}>
                         <Card className={classes.root} style={{margin: 10}}>
                             <CardActionArea href='https://concurrentplayers.com' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
                                 <CardMedia
@@ -396,66 +468,72 @@ const Portfolio = () => {
                         </Card>
                     </Fade>
                     </Grid>
+
+                    <Grid item xs={6}>
+                    <Fade delay={1750} duration={1500}>
+                        <Card className={classes.root} style={{margin: 10}}>
+                            <CardActionArea href='https://github.com/tom-pettit/GeneralRedditBot' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={RedditBotImg}
+                                    title="Contemplative Reptile"
+                                />
+
+                                <CardContent>
+                                    <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
+                                        General Reddit Bot
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}} className={classes.carddescription}>
+                                        An easy way to create reddit bots. Comes equipped with some prewritten functionality.
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+
+                            <CardActions style={{textAlign: 'center'}}>
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={PythonImg} height='30' width='30'/>
+                                </IconButton>
+                            </CardActions>
+                        </Card>
+                    </Fade>
+                    </Grid>
                 </Grid>
                 
-                <Grid container spacing={3}>
-                <Grid item xs={6}>
-                <Fade delay={1500} duration={1500}>
-                    <Card className={classes.root} style={{margin: 10}}>
-                        <CardActionArea href='https://github.com/tom-pettit/GeneralRedditBot' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
-                            <CardMedia
-                                className={classes.media}
-                                image={RedditBotImg}
-                                title="Contemplative Reptile"
-                            />
 
-                            <CardContent>
-                                <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
-                                    General Reddit Bot
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}} className={classes.carddescription}>
-                                    An easy way to create reddit bots. Comes equipped with some prewritten functionality.
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-
-                        <CardActions style={{textAlign: 'center'}}>
-                            <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
-                                <img src={PythonImg} height='30' width='30'/>
-                            </IconButton>
-                        </CardActions>
-                    </Card>
-                </Fade>
-                </Grid>
-            </Grid>
             </div>
 
             <div className={classes.smallscreengrid}>
                 <Grid container spacing={3}>
 
                     <Grid item xs={12}>
-                    <Fade delay={500} duration={1500}>
+                    <Fade duration={1500}>
                         <Card className={classes.root} style={{margin: 10}}>
-                            <CardActionArea href='https://ukcoronatracker.web.app' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                            <CardActionArea href='https://bobashop-1aa37.web.app/' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
                                 <CardMedia
                                     className={classes.media}
-                                    image={UKCoronaTrackerImg}
+                                    image={BobaShopImg}
                                     title="Contemplative Reptile"
                                 />
 
                                 <CardContent>
                                     <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
-                                        ukcoronatracker.web.app
+                                        Boba Tea Store
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}} className={classes.carddescription}>
-                                        A website used to track the COVID-19 situation in the UK
+                                        A website with a built-in online ordering system, developed for a company in the US.
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
 
                             <CardActions style={{textAlign: 'center'}}>
                                 <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
-                                    <img src={ReactImg} height='30' width='30'/>
+                                    <img src={VueImg} height='30' width='30'/>
+                                </IconButton>
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={NodeJSImg} height='30' width='40'/>
+                                </IconButton>
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={FirebaseImg} height='30' width='30'/>
                                 </IconButton>
                             </CardActions>
                         </Card>
@@ -463,7 +541,7 @@ const Portfolio = () => {
                     </Grid>
 
                     <Grid item xs={12}>
-                    <Fade delay={750} duration={1500}>
+                    <Fade duration={1500}>
                         <Card className={classes.root} style={{margin: 10}}>
                             <CardActionArea href='https://brumafriendhistory.com' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
                                 <CardMedia
@@ -496,7 +574,7 @@ const Portfolio = () => {
                     </Grid>
 
                     <Grid item xs={12}>
-                    <Fade delay={1000} duration={1500}>
+                    <Fade duration={1500}>
                         <Card className={classes.root} style={{margin: 10}}>
                             <CardActionArea href='https://hannahimaart-246f0.web.app/' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
                                 <CardMedia
@@ -529,7 +607,7 @@ const Portfolio = () => {
                     </Grid>
 
                     <Grid item xs={12}>
-                    <Fade delay={1250} duration={1500}>
+                    <Fade duration={1500}>
                         <Card className={classes.root} style={{margin: 10}}>
                             <CardActionArea href='https://concurrentplayers.com' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
                                 <CardMedia
@@ -563,8 +641,8 @@ const Portfolio = () => {
                 </Grid>
                 
                 <Grid container spacing={3}>
-                <Grid item xs={12}>
-                <Fade delay={1500} duration={1500}>
+                    <Grid item xs={12}>
+                    <Fade duration={1500}>
                     <Card className={classes.root} style={{margin: 10}}>
                         <CardActionArea href='https://github.com/tom-pettit/GeneralRedditBot' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
                             <CardMedia
@@ -590,8 +668,37 @@ const Portfolio = () => {
                         </CardActions>
                     </Card>
                 </Fade>
+                    </Grid>
+
+                    <Grid item xs={12}>
+                    <Fade duration={1500}>
+                        <Card className={classes.root} style={{margin: 10}}>
+                            <CardActionArea href='https://ukcoronatracker.web.app' target='_blank' className={classes.cardactionarea} style={{textDecoration: 'none'}}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={UKCoronaTrackerImg}
+                                    title="Contemplative Reptile"
+                                />
+
+                                <CardContent>
+                                    <Typography className={classes.cardtitle} gutterBottom variant="h5" component="h2" style={{fontFamily: 'Nunito Sans'}}>
+                                        ukcoronatracker.web.app
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: 'Nunito Sans'}} className={classes.carddescription}>
+                                        A website used to track the COVID-19 situation in the UK
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+
+                            <CardActions style={{textAlign: 'center'}}>
+                                <IconButton href='' style={{color: 'black', display: 'inline-block'}}>
+                                    <img src={ReactImg} height='30' width='30'/>
+                                </IconButton>
+                            </CardActions>
+                        </Card>
+                    </Fade>
+                    </Grid>
                 </Grid>
-            </Grid>
             </div>
 
 
